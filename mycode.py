@@ -2,19 +2,21 @@ import csv
 import sys
 
 def spend_points(points_to_spend, filename):
-    # Step 2: Read the CSV file and store transactions in a list of dicts
+
+    #Read the CSV file and store transactions in a list of dicts
     with open(filename, 'r') as f:
         reader = csv.DictReader(f)
         transactions = [row for row in reader]
 
-    # Step 3: Sort the transactions by timestamp in ascending order
+    #Sort the transactions by timestamp in ascending order
     transactions.sort(key=lambda t: t['timestamp'])
-    # Step 4: Create a dictionary to keep track of point balances
+
+    #Create a dictionary to keep track of point balances
     balances = {}
     for transaction in transactions:
         balances[transaction['payer']] = balances.get(transaction['payer'], 0) + int(transaction['points'])
 
-    # Step 5: Spend the points
+    #Spend the points
     spent = {}
     for transaction in transactions:
         payer = transaction['payer']
@@ -28,7 +30,7 @@ def spend_points(points_to_spend, filename):
         if points_to_spend == 0:
             break
 
-    # Step 6: Print the final balances
+    #Print the final balances
     for payer, balance in balances.items():
         print(f'{payer}: {balance}')
 
