@@ -1,0 +1,15 @@
+1. I chose to use Python for this coding exercise as it has a rich set of libraries for data manipulation and analysis, and is also commonly used in data science and analytics. In particular, I used the pandas library to read and manipulate the CSV file, and the argparse library to parse command-line arguments. These libraries are widely used and well-documented, making it easier for other developers to understand and maintain the code.
+
+2. 
+a. Advantages of my solution include:
+
+It correctly implements the rules for spending points based on transaction timestamp and payer balance.
+It uses the pandas library to efficiently manipulate the data, making it scalable for larger datasets.
+It provides clear and informative error messages for invalid input.
+
+b. Disadvantages of my solution include:
+
+It requires the pandas library to be installed, which may be an additional requirement for users who do not have it already installed.
+It assumes that the CSV file has a specific format with specific column names, and may not work for CSV files with different formats.
+
+My favourite project thus far has been developing a python script that predicts stock prices for traditional S&P500 stocks using multiple features and basic Machine Learning Libraries. This was my first project involving python and data scraping which also involved machine learning. The challenging part was definitely searching how to begin but eventually I got through this part and was able to complete the project while learning more about python, stock prediction algorithms, and machine learning frameworks. Since this project, I have worked on more python projects especially through courses at UW-Madison and tutoring computer science students.
